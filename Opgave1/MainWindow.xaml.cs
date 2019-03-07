@@ -20,9 +20,32 @@ namespace Opgave1
     /// </summary>
     public partial class MainWindow : Window
     {
+        private Color _color = Colors.Black;
+
         public MainWindow()
         {
             InitializeComponent();
+            MouseDown += Drawing_Start;
+            KeyDown += ColorSelection;
+            MouseMove += Position;
+        }
+
+        void Position(object sender, MouseEventArgs e)
+        {
+            var pos = e.GetPosition(_canvas);
+            xPos.Text = pos.X.ToString();
+            yPos.Text = pos.Y.ToString();
+        }
+
+        void Drawing_Start(object sender, MouseEventArgs e)
+        {
+
+        }
+
+        void ColorSelection(object sender, KeyEventArgs e)
+        {
+
+            colorDisp.Fill = new SolidColorBrush(_color);
         }
     }
 }

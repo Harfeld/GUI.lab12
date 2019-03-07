@@ -5,8 +5,41 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:Opgave1"
         mc:Ignorable="d"
-        Title="MainWindow" Height="450" Width="800">
+        Title="MainWindow" Height="560" Width="800">
     <Grid>
-        
+        <ToolBarTray Margin="0,0,0,479" Background="LightGray">
+            <ToolBar>
+                <Label Name="colorLabel" Content="Color: "></Label>
+                <Rectangle Name="colorDisp"  Height="20" Width="30"></Rectangle>
+            </ToolBar>
+        </ToolBarTray>
+        <Canvas Name="_canvas"
+                Margin="0,40,0,40" 
+                Background="White">
+        </Canvas>
+        <Grid Margin="0,479,0,0" Background="LightGray">
+            <Label Name="mousePosition" 
+                   Content="Mouse Position" 
+                   Margin="0,5,697,5"
+                   ></Label>
+            <Label Name="xLabel" 
+                   Content="X:"
+                   Width="20"
+                   Margin="100,5,672,5"
+                   ></Label>
+            <TextBox Name="xPos"
+                     Margin="125,0,599,5" 
+                     Height="30" 
+                     VerticalAlignment="Bottom"></TextBox>
+            <Label Name="yLabel" 
+                   Content="Y:"
+                   Width="20"
+                   Margin="198,5,574,5"
+            ></Label>
+            <TextBox Name="yPos"
+                     Margin="223,0,501,5" 
+                     Height="30" 
+                     VerticalAlignment="Bottom"></TextBox>
+        </Grid>
     </Grid>
 </Window>
